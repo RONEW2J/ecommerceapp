@@ -3,6 +3,7 @@
 import os
 import sys
 
+a = 5
 
 def main():
     """Run administrative tasks."""
