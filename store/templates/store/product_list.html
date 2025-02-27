@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Product List{% endblock %}
+{% block content %}
+    <h1>Product List</h1>
+    <a href="{% url 'product_create' %}" class="btn btn-success">Add New Product</a>
+    <ul class="product-list">
+        {% for product in products %}
+            <li>
+                <div class="product-info">
+                    <a href="{% url 'product_detail' product.pk %}" class="product-name">{{ product.name }}</a>
+                    <div class="product-price">${{ product.price }}</div>
+                </div>
+                <div class="product-actions">
+                    <a href="{% url 'product_update' product.pk %}" class="btn">Edit</a>
+                    <a href="{% url 'product_delete' product.pk %}" class="btn btn-danger">Delete</a>
+                </div>
+            </li>
+        {% empty %}
+            <li>No products available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
