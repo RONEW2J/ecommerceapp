@@ -17,3 +17,19 @@ templates/store/ — шаблоны для отображения страниц
 
 static/ — директория для статики (CSS, JS, изображения)
 
+# ⚙ Установка и запуск
+```
+$ pip install -r requirements.txt
+$ python manage.py migrate
+$ python manage.py createsuperuser
+$ python manage.py runserver
+```
+
+Open a browser and go to http://localhost:8000/
+
+# 🛠 Технологии
+Django (Python 3.x)
+
+HTML, CSS
+
+SQLite (по умолчанию)
